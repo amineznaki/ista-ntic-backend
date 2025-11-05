@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ista-ntic-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: postgresql://appuser:tlavlaU0L3Ag3Yb9O17J88E1MtNUeilh@dpg-d45pmfili9vc7385sad0-a/appdb_hbn1
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: admin123
+        sync: false
+      - key: FLASK_ENV
+        value: production
